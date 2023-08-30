@@ -1,0 +1,2 @@
+#!/bin/bash
+(echo .,..; ls -Ap | sort -k1,1d -k1,1) | awk 'BEGIN{ORS=","} {print} END{print "\n"}'
