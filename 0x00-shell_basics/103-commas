@@ -1,2 +1,2 @@
 #!/bin/bash
-(echo -e "./\n../"; ls -Ap | sort -k1,1d -k1,1 | tr '\n' ',') | awk 'NR>2{printf ","} {printf "%s", $0} END{print ""}'
+cat <(echo -e ".\n..") <(ls -Ap | sort -k1,1d -k1,1 | tr '\n' ',') - | awk 'NR>2{printf ","} {printf "%s", $0} END{print ""}'
